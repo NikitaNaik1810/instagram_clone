@@ -6,72 +6,59 @@
     <title>Instagram Clone</title>
     <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAABWVBMVEVyHVFHcEx0Fvp8Fv1yFP1/FfyLCOyfBOmtAeS7AuDHAd3UANjZAs7rD6xyFvzjANTqAMHoA7l2F/yPFfx8GPmfD/zFF/XVWujoZuLyZt3pRt/yGdHyA8j1AKTViPj/9Pr////8g9f9A7r3DZz5vO794Pf+ruj9B6uzFPv7JLv+AJr+BI/+YMP/1vD+AIThG+n9GZn/vd3/YZz+AXP+GoT/r8r+AmT/b5z+HHH+I3f+G2P/ur7+FFD+Klb+fYv/wcr+LUf+LWX+AFn+Nzr+Ohz+RT7+inP+Si7/ztD+TxL/zbv+Wy//9fH+WgL+c1X+ZyX+PUv+Bzv+VXD+cxr/6eL+aQT+eAX+nDj+gwD+gxH+fSL+rYn+jwD+iwL+XhX/3rn/1bH9ZR/+lwP+nwH+xHH8ZC3+qAH+sAD+wAP+x1P+zGb+pl79mQn+uAD9J3T+ygD9O1n8pRL9twuaEkMNAAAAc3RSTlMBAF3G///////////GW9j//9nY/1r///////////7//////8b/////////////////////////////////////////////////////////////////////////////////xf///1v////////Y/9j/2VzGSus+GgAAAeNJREFUeAFFjEWiU0EQRc/tqu74V9wZ4TBiB6wG3wpzVoQ7zHCXeELypHH+KVchJAESaEs0IUv0Zv+7fwLgSAOk9ZFghcnfDw4AAg18cyhWCKNVob9NCZjQLWVrEGhJbJGDoCBpMwCrJTETAKBWgdeRGb4dmJW56PdI/KU1K4X15N+AFsW0+3/WVm7Pa0Pmu4Fh7HcbRIjMIhr3FItUGAH4SNZKjK32YjKpK3Iv0yUY0b8g0Vs0oK+8wbeyMBAQwVeo44R1z7XWq6rqpn5jiTmAeQO3iceg9zkYzKvc71iEmMFbqCJJ4tDcKFrLjX5D/MEdq8GpIUUgd/tgGboTgiUDPDZ44SXNpr0gWRcAgqEmEPJRNVPOxYaOth0oAHdCxWoOzslH+RCvlafYMgFUHvAIHoCjz16io80BrH/j0AAcJ9KWKkhn5sRyGjsDtr/sqyrsWNO1cW9/cDNLZgHLSzVvn+wMq9qbKKwy7TiIaKTW56pzW6Oa+N1OKEQdvvl2RyOE4DEOZurd1cHNeab27tyjOPfhFlucXP04ovF97B6jTOzdJwFLaNAff7N6c8incH1VpiSR67q2VgjzUU7JgbMTiQtFKmgAsCAuczlflmVZn7iGBFc1awB/p4tqUS3LDb8OPwBrSrZIO/KHZwAAAABJRU5ErkJggg==" type="image/x-icon">
 
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Lobster&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="instagram">
-        <div class="left-bar">
-                
-                <div class="items">
-                    <div class="logo">Instagram</div>
-                </div>
+        <!-- Mobile Navigation Toggle -->
+        <button class="mobile-nav-toggle" onclick="toggleMobileNav()">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
 
-                <div class="items">
-                    <span class="material-symbols-outlined">
-                        home
-                    </span> Home
-                </div>
-                <div class="items">
-                    <span class="material-symbols-outlined">
-                        search
-                    </span> Search
-                </div>
-                <div class="items">
-                    <span class="material-symbols-outlined">
-                        explore
-                    </span> Explore
-                </div>
-                <div class="items">
-                    <span class="material-symbols-outlined">
-                        movie
-                    </span>Reels
-                </div>
-                <div class="items">
-                    <span class="material-symbols-outlined">
-                        send
-                    </span> Messages
-                </div>
-                <div class="items">
-                    <span class="material-symbols-outlined">
-                        favorite
-                    </span> Notifications
-                </div>
-                <div class="items">
-                    <span class="material-symbols-outlined">
-                        add_circle
-                    </span> Create
-                </div>
-                <div class="items">
-                    <span class="material-symbols-outlined">
-                        insert_chart
-                    </span>Dashboard
-                </div>
-                <div class="items">
-                    <span class="material-symbols-outlined">
-                        account_circle
-                    </span> Profile
-                </div>
-                <div class="items">
-                <span class="material-symbols-outlined">
-                    menu </span>More
-                </div>
+        <!-- Mobile Overlay -->
+        <div class="mobile-overlay" onclick="closeMobileNav()"></div>
+
+        <div class="left-bar" id="leftBar">
+            <div class="items">
+                <div class="logo">Instagram</div>
             </div>
+
+            <div class="items">
+                <span class="material-symbols-outlined">home</span> Home
+            </div>
+            <div class="items">
+                <span class="material-symbols-outlined">search</span> Search
+            </div>
+            <div class="items">
+                <span class="material-symbols-outlined">explore</span> Explore
+            </div>
+            <div class="items">
+                <span class="material-symbols-outlined">movie</span>Reels
+            </div>
+            <div class="items">
+                <span class="material-symbols-outlined">send</span> Messages
+            </div>
+            <div class="items">
+                <span class="material-symbols-outlined">favorite</span> Notifications
+            </div>
+            <div class="items">
+                <span class="material-symbols-outlined">add_circle</span> Create
+            </div>
+            <div class="items">
+                <span class="material-symbols-outlined">insert_chart</span>Dashboard
+            </div>
+            <div class="items">
+                <span class="material-symbols-outlined">account_circle</span> Profile
+            </div>
+            <div class="items">
+                <span class="material-symbols-outlined">menu</span>More
+            </div>
+        </div>
+
         <div class="post-bar">
             <div class="story">
                 <div class="items">
@@ -149,20 +136,12 @@
                 </div>
                 <div class="engagement-section">
                     <div class="left-logo">
-                        <span class="material-symbols-outlined">
-                        favorite
-                    </span> 
-                    <span class="material-symbols-outlined">
-                        comment
-                    </span>
-                    <span class="material-symbols-outlined">
-                        share
-                    </span>
+                        <span class="material-symbols-outlined">favorite</span> 
+                        <span class="material-symbols-outlined">comment</span>
+                        <span class="material-symbols-outlined">share</span>
                     </div>
                     <div class="right-logo">
-                        <span class="material-symbols-outlined">
-                        bookmark
-                    </span>
+                        <span class="material-symbols-outlined">bookmark</span>
                     </div>
                 </div>
                 <div class="profile">
@@ -174,20 +153,12 @@
                 </div>
                 <div class="engagement-section">
                     <div class="left-logo">
-                        <span class="material-symbols-outlined">
-                        favorite
-                    </span> 
-                    <span class="material-symbols-outlined">
-                        comment
-                    </span>
-                    <span class="material-symbols-outlined">
-                        share
-                    </span>
+                        <span class="material-symbols-outlined">favorite</span> 
+                        <span class="material-symbols-outlined">comment</span>
+                        <span class="material-symbols-outlined">share</span>
                     </div>
                     <div class="right-logo">
-                        <span class="material-symbols-outlined">
-                        bookmark
-                    </span>
+                        <span class="material-symbols-outlined">bookmark</span>
                     </div>
                 </div>
                 <div class="profile">
@@ -199,24 +170,17 @@
                 </div>
                 <div class="engagement-section">
                     <div class="left-logo">
-                        <span class="material-symbols-outlined">
-                        favorite
-                    </span> 
-                    <span class="material-symbols-outlined">
-                        comment
-                    </span>
-                    <span class="material-symbols-outlined">
-                        share
-                    </span>
+                        <span class="material-symbols-outlined">favorite</span> 
+                        <span class="material-symbols-outlined">comment</span>
+                        <span class="material-symbols-outlined">share</span>
                     </div>
                     <div class="right-logo">
-                        <span class="material-symbols-outlined">
-                        bookmark
-                    </span>
+                        <span class="material-symbols-outlined">bookmark</span>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="suggestion-section">
             <div class="suggestion m">
                 <div class="profile">
@@ -303,7 +267,59 @@
                 <div class="follow">Follow</div>
             </div>
         </div>
+
+        <!-- Mobile Bottom Navigation -->
+        <nav class="mobile-bottom-nav">
+            <div class="nav-items">
+                <div class="nav-item">
+                    <span class="material-symbols-outlined">home</span>
+                </div>
+                <div class="nav-item">
+                    <span class="material-symbols-outlined">search</span>
+                </div>
+                <div class="nav-item">
+                    <span class="material-symbols-outlined">add_circle</span>
+                </div>
+                <div class="nav-item">
+                    <span class="material-symbols-outlined">favorite</span>
+                </div>
+                <div class="nav-item">
+                    <span class="material-symbols-outlined">account_circle</span>
+                </div>
+            </div>
+        </nav>
     </div>
-    <script src="script.js"></script>
+
+    <script>
+        function toggleMobileNav() {
+            const leftBar = document.getElementById('leftBar');
+            const overlay = document.querySelector('.mobile-overlay');
+            
+            leftBar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+
+        function closeMobileNav() {
+            const leftBar = document.getElementById('leftBar');
+            const overlay = document.querySelector('.mobile-overlay');
+            
+            leftBar.classList.remove('active');
+            overlay.classList.remove('active');
+        }
+
+        // Close mobile nav when clicking on nav items
+        document.querySelectorAll('.left-bar .items').forEach(item => {
+            item.addEventListener('click', closeMobileNav);
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                closeMobileNav();
+            }
+        });
+        // Close mobile nav on overlay click
+        document.querySelector('.mobile-overlay').addEventListener('click', closeMobileNav);
+    </script>
 </body>
 </html>
